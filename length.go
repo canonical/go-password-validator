@@ -92,3 +92,11 @@ func getLength(password string) int {
 	password = removeMoreThanTwoFromSequence(password, getReversedString(seqAlphabet))
 	return len(password)
 }
+
+// GetLength returns the number of runes left in password after
+// the shortening of: sequence of more than two identical runes,
+// and sequences of more than two runes from the same "proximity set"
+// (meaning a set of characters close by on a standard keyboard).
+func GetLength(password string) int {
+	return getLength(password)
+}

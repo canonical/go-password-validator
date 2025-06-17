@@ -64,3 +64,9 @@ func getBase(password string) int {
 	}
 	return base
 }
+
+// GetBase returns the estimated total size of the character set the
+// runes contained in password come from.
+func GetBase(password string) int {
+	return getBase(password)
+}
